@@ -21,7 +21,7 @@ resource "aws_ecs_task_definition" "task" {
   container_definitions    = jsonencode([
     {
       name      = "my-app",
-      image     = "my-docker-image",
+      image     = "ubuntu",
       essential = true,
       memory    = 512,
       cpu       = 256,
