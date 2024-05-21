@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: ubuntu:latest
+    ports:
+      - "80:80"
+    environment:
+      - ENV_VAR=value
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: my-log-group
+        awslogs-region: us-east-1
+        awslogs-stream-prefix: web
